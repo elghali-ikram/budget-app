@@ -50,6 +50,9 @@ export default function Home() {
     localStorage.setItem(myValue, JSON.stringify(userData));    
 
   };
+  const totalIncome = Object.keys(income).reduce((acc, key) => acc + parseInt(income[key].montant), 0);
+  const totalexpenses = Object.keys(expenses).reduce((acc, key) => acc + parseInt(expenses[key].montant), 0);
+  const budget=totalIncome - totalexpenses;
   return (
     <div>
       <Navbar />
@@ -57,8 +60,8 @@ export default function Home() {
        <div className='d-flex flex-column'>
         <div className="card  m-5 ">
           <div className="card-body text-center">
-            <h3 className="card-title">ERROR</h3>
-            <h5 className="card-title">create account</h5>
+            <h3 className="card-title">Your current budget</h3>
+            <h5 className="card-title">{budget}</h5>
           </div>
         </div>
               <div className='d-flex'>
@@ -100,10 +103,12 @@ export default function Home() {
           <div className="card-body text-center d-flex gap-5 p-3">
             <div>
       <h1>Expenses</h1>
+      <p>total expenses:{totalexpenses}</p>
       {Expensestransaction(expenses)}
     </div>
     <div>
       <h1>Income</h1>
+      <p>total Income:{totalIncome}</p>
       {Incometransaction(income)}
     </div>
           </div>

@@ -18,10 +18,8 @@ function Navbar() {
   
   return (
     <div>
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link className="navbar-brand" to="/">
-        <img src={logo} alt="Logo" />
-      </Link>
+    <nav className="navbar p-4 bgnav navbar-expand-lg navbar-light bg-light">
+
       <button
         className="navbar-toggler"
         type="button"

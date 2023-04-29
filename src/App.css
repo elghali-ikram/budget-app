@@ -2,18 +2,13 @@ body
 {
   background-color: #CBE4DE;
 }
-.bgbtn
-{
-  background-color: #7C9070;
-  color: aliceblue;
-  padding: 10px;
-}
-.btnsubmit
+.btnsubmit ,.btnsubmit:hover
 {
   background-color: #7C9070;
 }
-.btnsubmit:hover
-{
-  background-color: #7C9070;
 
+.accent
+{
+  color: #F97B22;
 }
+

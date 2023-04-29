@@ -40,13 +40,13 @@ export default function Signin() {
 
   return (
     <div>
-      <div className="d-flex p-4 justify-content-center">
+      <div className="d-flex  justify-content-center">
         <div className="bg d-flex mt-3 rounded w-75">
-          <img src={icon} alt="signup" width="50%" />
           <div className="p-5 w-75 d-flex flex-column justify-content-center gap-4" id="signupform">
             {show ? <div>remplir les champs</div> : <div></div>}
             {showemail ? <div>verifier votre password</div> : <div></div>}
-            <h1 className="text-center">Create account</h1>
+            <h1 className=" w-bold">Take Control of <span className="accent">Your Money</span></h1>
+<p>Personal budgeting is the secret to financial freedom. Start your journey today</p>
             <div className="formvalid">
               <input type="text" name="name" ref={name} className="form-control" placeholder="Enter your name" />
             </div>
@@ -56,8 +56,9 @@ export default function Signin() {
             <div className="formvalid">
               <input type="password" name="password" ref={password} className="form-control" placeholder="Enter your password" />
             </div>
-            <button className="btn  w-50" onClick={handleClick} name="signupbtn" value="signupbtn" id="signupbtn">Sign up</button>
+            <button className="btn btnsubmit  w-50" onClick={handleClick} name="signupbtn" value="signupbtn" id="signupbtn">Enter</button>
           </div>
+          <img src={icon} alt="signup" width="50%" />
         </div>
       </div>
     </div>
