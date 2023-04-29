@@ -21,7 +21,6 @@ export default function Signin() {
         else {
           setShowemail(true)
         }
-
       }
       else {
         let accountInfo = { 'name': name.current.value, 'email': email.current.value, 'password': password.current.value, 'signin': 'true' };
