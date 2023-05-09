@@ -12,12 +12,12 @@ export default function Home() {
     } else {
       setShowstat(false);
     }
-  }, []);
+  }, [myValue]);
   const montant = useRef();
   const motif = useRef();
   const categorie = useRef();
   const type = useRef();
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const currentDate= new Date();
   const formatDate = (date) => {
     const month = date.getMonth() + 1;
     const day = date.getDate();
